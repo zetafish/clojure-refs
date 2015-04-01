@@ -1,2 +1,2 @@
 *  Clojure for the Brave and True
-   - [x] http://www.braveclojure.com/read-and-eval/
+   - [ ] http://www.braveclojure.com/read-and-eval/
