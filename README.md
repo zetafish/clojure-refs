@@ -1,5 +1,3 @@
-# Clojure
-
 ## Clojure
 * core.logic: [https://github.com/clojure/core.logic](https://github.com/clojure/core.logic)
 * core.async: [https://github.com/clojure/core.async](https://github.com/clojure/core.async)
