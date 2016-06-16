@@ -14,6 +14,7 @@
 * compojure: [https://github.com/weavejester/compojure](https://github.com/weavejester/compojure)
 * haml/sass: [https://github.com/rtircher/lein-haml-sass](https://github.com/rtircher/lein-haml-sass)
 * http-kit: [http://www.http-kit.org/](http://www.http-kit.org/)
+* immutant2: (http://immutant.org/)
 * pedestal: [https://github.com/pedestal/pedestal](https://github.com/pedestal/pedestal)
 
 ## Math
