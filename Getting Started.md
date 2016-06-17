@@ -40,7 +40,7 @@ This will create a `~/.boot/boot.properties` file. Change clojure version and bo
     BOOT_EMIT_TARGET=no
     BOOT_CLOJURE_NAME=org.clojure/clojure
     BOOT_VERSION=2.6.0
-    BOOT_CLOJURE_VERSION=1.9.0-alpha6
+    BOOT_CLOJURE_VERSION=1.8.0
 
 Then run again to pull in the new versions of clojure and boot
 
@@ -60,11 +60,12 @@ There are several good editor options:
 
 ### Emacs
 
-Emacs is my favourite editor for editing Clojure files. Emacs+CIDER is perfect for Clojure development. Emacs is unlike any other text editor. It is fully programmable and customizable. I find it more powerful than an IDE.
+Emacs+CIDER is perfect for Clojure development. Emacs is unlike any other text editor. It is fully programmable and customizable. I find it more powerful than an IDE.
 
 You want to install Emacs 24.1+, see http://david.rothlis.net/emacs/install.html
 
 You will need to configure Emacs for proper clojure editing. The init file is in `~/.emacs.d/init.el` and is written in ELisp. Put the following in the init file:
+
 
     ;; A nicer font
     (set-frame-font "Monaco-12" nil t)
@@ -97,6 +98,7 @@ You will need to configure Emacs for proper clojure editing. The init file is in
             (paredit-mode)
             (eldoc-mode)
             (clj-refactor-mode 1)))
+
 
 ### Vim+Fireplace
 
