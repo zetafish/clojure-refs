@@ -1,8 +1,8 @@
 # Getting Started with Clojure
 
-## Install Software
+## Java
 
-### Install java 8
+In order to run Clojure you need java.
 
 On Linux you can use your package manage, e.g.:
 
@@ -10,16 +10,16 @@ On Linux you can use your package manage, e.g.:
 
 On Mac OS X or Windows download from [oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
-### Install build tooling
+## Build tooling
 
 For clojure there are two main build tools:
 
-- [Leiningen](https://github.com/technomancy/leiningen)
 - [Boot](https://github.com/boot-clj/boot)
+- [Leiningen](https://github.com/technomancy/leiningen)
 
 Boot is the preferred tool because of its simplicity and power. This is enough when editing files in Emacs. When you want to use Cursive you will need Leiningen as well
 
-#### Install boot
+### Boot
 
 See https://github.com/boot-clj/boot for detailed instructions
 
@@ -42,11 +42,11 @@ This will create a `~/.boot/boot.properties` file. Change clojure version and bo
     BOOT_VERSION=2.6.0
     BOOT_CLOJURE_VERSION=1.9.0-alpha6
 
-Then run again to pull in the new versions of clojure and bootstrap
+Then run again to pull in the new versions of clojure and boot
 
     boot
 
-#### Install Leinigen
+### Leinigen
 
 See https://github.com/technomancy/leiningen for instructions
 
@@ -54,24 +54,54 @@ See https://github.com/technomancy/leiningen for instructions
 
 There are several good editor options:
 
-- Emacs
+- Emacs+CIDER
 - Cursive IDE (from JetBrains)
+- Vim+Fireplace
 
-I prefer Emacs. Using Emacs presents a learning curve. It is unlike any other editor you have used. It gives you ultimate power.
+### Emacs
 
-### Install Emacs
+Emacs is my favourite editor for editing Clojure files. Emacs+CIDER is perfect for Clojure development. Emacs is unlike any other text editor. It is fully programmable and customizable. I find it more powerful than an IDE.
 
+You want to install Emacs 24.1+, see http://david.rothlis.net/emacs/install.html
 
-See [here](http://david.rothlis.net/emacs/install.html). Make sure you have Emacs 24.1+
+You will need to configure Emacs for proper clojure editing. The init file is in `~/.emacs.d/init.el` and is written in ELisp. Put the following in the init file:
 
-You will need to customize your Emacs to  `~/.emacs.d/init.el`
-
-Cooler font
-
+    ;; A nicer font
     (set-frame-font "Monaco-12" nil t)
 
-Line numbers
-
+    ;; Line numbers
     (global-linum-mode t)
-    (setq)
-Add the following to your `~/.emacs.d/init.el` file:
+    (setq linum-format "%4d ")
+
+    ;; Highlight parenthesis
+    (show-paren-mode 1)
+
+    ;; Package management
+    (require 'package)
+    (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+    (package-initialize)
+    (unless package-archive-contents (package-refresh-contents))
+    (when (not (package-installed-p 'paradox))
+        (package-install 'paradox))
+
+    ;; Install Clojure packages
+    (paradox-require 'clojure-mode)
+    (paradox-require 'clj-refactor)
+    (paradox-require 'paredit)
+    (paradox-require 'eldoc)
+    (paradox-require 'cider)
+    (paradox-require 'flycheck-clojure)
+
+    (add-hook 'clojure-mode-hook
+          (lambda ()
+            (paredit-mode)
+            (eldoc-mode)
+            (clj-refactor-mode 1)))
+
+### Vim+Fireplace
+
+TODO
+
+### Cursive
+
+TODO
