@@ -107,3 +107,7 @@ TODO
 ### Cursive
 
 TODO
+
+## Code style
+
+See https://github.com/bbatsov/clojure-style-guide
