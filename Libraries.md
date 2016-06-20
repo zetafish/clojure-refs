@@ -3,9 +3,13 @@
 
 ## JSON
 
+https://github.com/dakrone/cheshire
+
     [cheshire "5.6.2"]
 
-## Web (a la Flask)
+## Web
+
+http://immutant.org/documentation/current/apidoc/guide-web.html
 
     [org.immutant/web "2.1.4"]
 
@@ -17,9 +21,13 @@ https://github.com/ptaoussanis/timbre
 
 ## Routing
 
+https://github.com/weavejester/compojure
+
     [compojure "1.5.1"]
 
 ## Http
+
+http://www.http-kit.org/index.html
 
     [http-kit "2.1.19"]
 
@@ -33,10 +41,10 @@ zeromq *TODO*
 
 ## Scheduling
 
-http://docs.caudate.me/cronj/
+http://immutant.org/documentation/current/apidoc/guide-scheduling.html
 
-    [im.chit/cronj "1.4.4"]
-
+    [org.immutant.scheduling "2.1.4"]
+    
 ## Testing
 
     [adzerk/boot-test "1.1.1" :scope "test"]
