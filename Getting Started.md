@@ -111,3 +111,7 @@ TODO
 ## Code style
 
 See https://github.com/bbatsov/clojure-style-guide
+
+## Example uber jar
+
+https://github.com/adzerk-oss/boot-uberjar-example
