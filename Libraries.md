@@ -11,6 +11,8 @@
 
 ## Logging
 
+https://github.com/ptaoussanis/timbre
+
     [com.taoensso/timbre "4.4.0"]
 
 ## Routing
@@ -24,3 +26,17 @@
 ## Messaging
 
 zeromq *TODO*
+
+## Async
+
+    [org.clojure/core.async "0.2.385"]
+
+## Scheduling
+
+http://docs.caudate.me/cronj/
+
+    [im.chit/cronj "1.4.4"]
+
+## Testing
+
+    [adzerk/boot-test "1.1.1" :scope "test"]
