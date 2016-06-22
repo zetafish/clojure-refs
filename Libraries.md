@@ -24,6 +24,10 @@ https://github.com/ptaoussanis/timbre
 https://github.com/weavejester/compojure
 
     [compojure "1.5.1"]
+    
+## Components
+
+https://github.com/stuartsierra/component
 
 ## Http
 
